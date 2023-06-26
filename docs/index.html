@@ -1,126 +1,74 @@
 <!DOCTYPE html>
-<html>
-	<head>
-	    <meta charset="utf-8">
-	    <title>Home</title>
-  	</head>
-  	<body>
-    	<h1>Hello World!</h1>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:title" content="My GitHub Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Built with React and the GitHub REST API."
+    />
+    <!-- Add an image for social media - https://css-tricks.com/essential-meta-tags-social-media/ -->
+    <meta
+      property="og:image"
+      content="https://YourUsername.github.io/your-app/GH.png"
+    />
+    <meta
+      property="og:url"
+      content="https://YourUsername.github.io/your-app/"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:alt" content="React and GitHub" />
+    <meta property="og:site_name" content="GitHub Portfolio" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-<H1>More Examples of Scripts Created with CGI.pm</H1>
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-<H2> Basic Non Sequitur Questionnaire</H2>
-<UL>
-  <LI> <A HREF="tryit.cgi">Try the script</A>
-  <LI> <A HREF="tryit.txt">Look at its source code</A>
-</UL>
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-<H2> Advanced Non Sequitur Questionnaire</H2>
-<UL>
-  <LI> <A HREF="monty.cgi">Try the script</A>
-  <LI> <A HREF="monty.txt">Look at its source code</A>
-</UL>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+   <!--JokeAPP Onrender Starts Here-->
+    <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "da25a5c3-a7ef-46ec-a1c8-bdbfc7e1d125",
+        apiHost: "https://www.gochatlaw.com",
+    })
+    </script>
 
-<H2> Save and restore the state of a form to a file</H2>
-<UL>
-  <LI> <A HREF="save_state.cgi">Try the script</A>
-  <LI> <A HREF="save_state.txt">Look at its source code</A>
-</UL>
-
-<H2> Server Push</H2>
-<ul>
-  <li><a href="nph-multipart.cgi">Try the script</a>
-  <li><a href="nph-multipart.txt">Look at its source code</a>
-</ul>
-
-<H2> Read the coordinates from a clickable image map</H2>
-<UL>
-  <LI> <A HREF="clickable_image.cgi">Try the script</A>
-  <LI> <A HREF="clickable_image.txt">Look at its source code</A>
-</UL>
-
-<H2> Multiple independent forms on the same page</H2>
-<UL>
-  <LI> <A HREF="multiple_forms.cgi">Try the script</A>
-  <LI> <A HREF="multiple_forms.txt">Look at its source code</A>
-</UL>
-
-<H2> How to maintain state on a page with internal links</H2>
-<UL>
-  <LI> <A HREF="internal_links.cgi">Try the script</A>
-  <LI> <A HREF="internal_links.txt">Look at its source code</A>
-</UL>
-
-<h2>Echo fatal script errors to the browser</h2>
-<em>This script deliberately generates a compile-time error.</em>
-<ul>
-  <li><a href="crash.cgi">Try the script</a>
-  <li><a href="crash.txt">Look at its source code</a>
-</ul>
-
-<EM>The Following Scripts Work with Netscape Navigator 2.0 and higher,
-or Internet Explorer 3.0 and higher</EM>
-
-<H2> Prompt for a file to upload and process it</H2>
-<UL>
-  <LI> <A HREF="file_upload.cgi">Try the script</A>
-  <LI> <A HREF="file_upload.txt">Look at its source code</A>
-</UL>
-
-<h2> A Continuously-Updated Page using Server Push</h2>
-<ul>
-  <li><a href="nph-clock.cgi">Try the script</a>
-  <li><a href="nph-clock.txt">Look at its source code</a>
-</ul>
-
-<h2>Compute the "diff" between two uploaded files</h2>
-<ul>
-  <li><a href="diff_upload.cgi">Try the script</a>
-  <li><a href="diff_upload.txt">Look at its source code</a>
-</ul>
-
-<h2>Maintain state over a long period with a cookie</h2>
-<ul>
-  <li><a href="cookie.cgi">Try the script</a>
-  <li><a href="cookie.txt">Look at its source code</a>
-</ul>
-
-<h2>Permanently customize the appearance of a page with a cookie</h2>
-<ul>
-  <li><a href="customize.cgi">Try the script</a>
-  <li><a href="customize.txt">Look at its source code</a>
-</ul>
-
-<h2> Popup the response in a new window</h2>
-<ul>
-  <li><a href="popup.cgi">Try the script</a>
-  <li><a href="popup.txt">Look at its source code</a>
-</ul>
-
-<h2> Side-by-side form and response using frames</h2>
-<ul>
-  <li><a href="frameset.cgi">Try the script</a>
-  <li><a href="frameset.txt">Look at its source code</a>
-</ul>
-
-<h2>Verify the Contents of a fill-out form with JavaScript</h2>
-<ul>
-  <li><a href="javascript.cgi">Try the script</a>
-  <li><a href="javascript.txt">Look at its source code</a>
-</ul>
-
-<HR>
-<MENU>
-  <LI> <A HREF="../cgi_docs.html">CGI.pm documentation</A>
-  <LI> <A HREF="../CGI.pm.tar.gz">Download the CGI.pm distribution</A>
-</MENU>
-<HR>
-<ADDRESS>Lincoln D. Stein, lstein@genome.wi.mit.edu<br>
-<a href="/">Whitehead Institute/MIT Center for Genome Research</a></ADDRESS>
-<!-- hhmts start -->
-Last modified: Wed Jun 23 15:31:47 EDT 1999
-<!-- hhmts end -->
-
-
-  	</body>
+   <!--JokeAPP Onrender Ends Here-->
+  </body>
 </html>
